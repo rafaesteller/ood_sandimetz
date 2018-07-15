@@ -1,0 +1,21 @@
+{
+    "name": "rafaesteller/sandimetz_ood",
+    "description": "Code examples translated to PHP from the book Practical OOD in Ruby",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Rafael Esteller",
+            "email": "esteller.rafa@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "monolog/monolog": "1.*"
+    },
+
+    "autoload": {
+
+            "psr-0": { "": "src/" }
+
+    }
+}

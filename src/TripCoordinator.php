@@ -10,7 +10,7 @@ class TripCoordinator implements Preparer
 
     private function buyFood(array $customers)
     {
-
+        echo (__METHOD__);
     }
 
 }
