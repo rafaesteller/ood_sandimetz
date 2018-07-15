@@ -6,18 +6,22 @@ abstract class Bicycle
     private $chain;
     private $tireSize;
 
-    public function __construct($size, $chain = '10-speed', $tireSize = '23')
+    public function __construct($size, $chain = null, $tireSize = null)
     {
         $this->size = $size;
-        $this->chain= $chain;
-        $this->tireSize = $tireSize;
+        $this->chain = $chain == null ? $this->defaultChain() : $chain;
+        $this->tireSize = $tireSize == null ? $this->defaultTireSize() : $tireSize;
+    }
 
+    protected function defaultChain()
+    {
+        return '10-speed';
     }
 
     public function spares()
     {
-     return ['chain' => $this->chain,
-         'tireSize' => $this->tireSize,
+        return ['chain' => $this->chain,
+            'tireSize' => $this->tireSize,
         ];
     }
 }

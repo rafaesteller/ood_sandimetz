@@ -19,4 +19,9 @@ class MountainBike extends Bicycle
             'rearShock' => $this->rearShock]);
 
     }
+
+    public function defaultTireSize()
+    {
+        return '2.3';
+    }
 }

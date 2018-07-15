@@ -22,4 +22,10 @@ class RoadBike extends Bicycle
         return array_merge(parent::spares(), ['tapeColor' => $this->tapeColor]);
 
     }
+
+    public function defaultTireSize()
+    {
+        return '23';
+    }
+
 }
