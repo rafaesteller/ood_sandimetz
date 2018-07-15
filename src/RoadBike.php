@@ -16,4 +16,10 @@ class RoadBike extends Bicycle
         $this->tapeColor = $tapeColor;
         parent::__construct($size);
     }
+
+    public function spares()
+    {
+        return array_merge(parent::spares(), ['tapeColor' => $this->tapeColor]);
+
+    }
 }

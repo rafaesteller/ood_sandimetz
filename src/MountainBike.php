@@ -15,7 +15,8 @@ class MountainBike extends Bicycle
 
     public function spares()
     {
-        return array_merge(parent::spares(), [$this->frontShock, $this->rearShock]);
+        return array_merge(parent::spares(), ['frontShock' => $this->frontShock,
+            'rearShock' => $this->rearShock]);
 
     }
 }
