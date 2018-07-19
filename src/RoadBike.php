@@ -8,7 +8,6 @@
 
 class RoadBike extends Bicycle
 {
-
     private $tapeColor;
 
     public function __construct($size, $tapeColor)
@@ -19,13 +18,16 @@ class RoadBike extends Bicycle
 
     public function spares()
     {
-        return array_merge(parent::spares(), ['tapeColor' => $this->tapeColor]);
-
+        return array_merge(
+            parent::spares(),
+            [
+                'tapeColor' => $this->tapeColor
+            ]
+        );
     }
 
     public function defaultTireSize()
     {
         return '23';
     }
-
 }

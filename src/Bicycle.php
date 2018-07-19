@@ -13,6 +13,8 @@ abstract class Bicycle
         $this->tireSize = $tireSize == null ? $this->defaultTireSize() : $tireSize;
     }
 
+    abstract function defaultTireSize();
+
     protected function defaultChain()
     {
         return '10-speed';
@@ -20,7 +22,8 @@ abstract class Bicycle
 
     public function spares()
     {
-        return ['chain' => $this->chain,
+        return [
+            'chain' => $this->chain,
             'tireSize' => $this->tireSize,
         ];
     }
