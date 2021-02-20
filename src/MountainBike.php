@@ -2,7 +2,6 @@
 
 class MountainBike extends Bicycle
 {
-
     private $frontShock;
     private $rearShock;
 
@@ -15,13 +14,17 @@ class MountainBike extends Bicycle
 
     public function spares()
     {
-        return array_merge(parent::spares(), ['frontShock' => $this->frontShock,
-            'rearShock' => $this->rearShock]);
-
+        return array_merge(
+            parent::spares(),
+            [
+                'frontShock' => $this->frontShock,
+                'rearShock' => $this->rearShock
+            ]
+        );
     }
 
     public function defaultTireSize()
     {
-        return '2.3';
+        return '2.1';
     }
 }
